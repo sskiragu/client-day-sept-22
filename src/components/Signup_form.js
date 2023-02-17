@@ -1,4 +1,3 @@
-import { Box, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -29,43 +28,29 @@ function Signup() {
   }
 
   return (
-    <Box 
-        onSubmit={signup}
-        component="form"
-        sx={{
-            '& .MuiTextField-root': { m: 1, width: '50ch' },
-          }}>
+    <form onSubmit={signup}>
         <div>
-            <TextField 
-              defaultValue={username}
+            <input 
+              value={username}
               onChange={e => setUsername(e.target.value)}
-              type="text" 
-              variant="outlined" 
-              label="Username"/>
+              type="text"/>
         </div>
         <div>
-            <TextField 
-              defaultValue={email}
+            <input 
+              value={email}
               onChange={e => setEmail(e.target.value)}
-              type="email" 
-              variant="outlined" 
-              label="Email"/>
+              type="email" />
         </div>
         <div>
-            <TextField 
-              defaultValue={password}
+            <input 
+              value={password}
               onChange={e => setPassword(e.target.value)}
-              type="password" 
-              variant="outlined" 
-              label="Password"/>
+              type="password" />
         </div>
         <div>
-            <Button 
-                type="submit"
-                variant="outlined"
-                sx={{m: 1}}>Signup</Button>
+            <button type="submit">Signup</button>
         </div>
-    </Box>
+    </form>
   )
 }
 

@@ -8,6 +8,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Contacts from "./components/Contacts";
 import Signup from "./components/Signup";
+import Login from "./components/Login";
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/services" element={<Services/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
+      <Route path="/login" element={<Login />}/>
       <Route path="/signup" element={<Signup />}/>
     </Routes>
     </BrowserRouter>
